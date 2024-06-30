@@ -1,0 +1,7 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_sample_submission,access_sample_submission,model_sample_submission,base.group_user,1,1,1,1
+access_sample_submission_material,sample_submission_material,model_sample_submission_material,,1,1,1,1
+access_material_wizard_wiz,material_wizard_wiz,model_material_wizard_wiz,,1,1,1,1
+access_generate_bills_wiz,generate_bills_wiz,model_generate_bills_wiz,,1,1,1,1
+access_generate_bills_wiz_lines,generate_bills_wiz_lines,model_generate_bills_wiz_lines,,1,1,1,1
+access_sample_submission_report_wizard,generate_sample_submission_report_wizard,model_sample_submission_report_wizard,,1,1,1,1

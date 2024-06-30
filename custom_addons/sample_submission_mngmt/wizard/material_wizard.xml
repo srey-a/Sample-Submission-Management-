@@ -1,0 +1,33 @@
+<odoo>
+    <data>
+        <record id="material_wizard_wiz_form" model="ir.ui.view">
+            <field name="name">material.wizard.wiz.form.view</field>
+            <field name="model">material.wizard.wiz</field>
+            <field name="arch" type="xml">
+                <form string="Material">
+                    <group>
+                        <field name="product_id" required="1"/>
+                        <field name="quantity"/>
+                        <field name="remarks"/>
+                    </group>
+                    <footer>
+                        <button name="add_material"
+                                string="Add"
+                                type="object"
+                                class="btn-primary"
+                        />
+                    </footer>
+                </form>
+            </field>
+        </record>
+
+        <record id="action_material_wizard_wiz" model="ir.actions.act_window">
+            <field name="name">Material</field>
+            <field name="res_model">material.wizard.wiz</field>
+            <field name="view_mode">form</field>
+            <field name="view_id" ref="material_wizard_wiz_form"/>
+            <field name="context"/>
+            <field name="target">new</field>
+        </record>
+    </data>
+</odoo>

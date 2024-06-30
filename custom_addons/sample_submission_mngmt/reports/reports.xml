@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <record id="sample_print_paper_format" model="report.paperformat">
+            <field name="name">Sample Print Paper Format</field>
+            <field name="default" eval="True"/>
+            <field name="format">A4</field>
+            <field name="orientation">Portrait</field>
+            <field name="page_height">0</field>
+            <field name="page_width">0</field>
+            <field name="margin_top">30</field>
+            <field name="margin_bottom">65</field>
+            <field name="margin_left">10</field>
+            <field name="margin_right">10</field>
+            <field name="header_spacing">5</field>
+            <field name="dpi">90</field>
+        </record>
+        <report id="sample_print_id"
+                model="sample.submission"
+                name="sample_submission_mngmt.sample_report_print"
+                file="file.sample_submission_mngmt.jobcard_purchase_bill_report_print"
+                report_type="qweb-pdf"
+                string="Sample Pdf Print"
+                menu="False"
+                paperformat="sample_submission_mngmt.sample_print_paper_format"/>
+        <report id="pdf_report"
+                model="sample.submission.report.wizard"
+                name="sample_submission_mngmt.sample_report_print"
+                file="file.sample_submission_mngmt.sample_report_print"
+                report_type="qweb-pdf"
+                string="PDF Report"
+                menu="False"
+                paperformat="sample_submission_mngmt.sample_print_paper_format"/>
+        <report
+                id="action_report_sample_submission"
+                model="sample.submission"
+                string="Sample Submission Report"
+                report_type="qweb-pdf"
+                name="sample_submission_mngmt.report_sample_submission"
+                file="sample_submission_mngmt.report_sample_submission"
+        />
+    </data>
+</odoo>

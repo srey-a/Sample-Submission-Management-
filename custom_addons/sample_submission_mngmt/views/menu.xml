@@ -1,0 +1,27 @@
+<odoo>
+    <data>
+        <menuitem id="sampe_submission_menu_root"
+                  web_icon="static/description/Untitled_design.png"
+                  name="Sample Submission Management" sequence="1"
+        />
+        <menuitem id="sample_submission_menu"
+                  parent="sampe_submission_menu_root"
+                  name="Sample Submission"
+                  sequence="1"
+                  action="sample_submission_mngmt.sample_submission_action"/>
+        <menuitem id="master_data_menu"
+                  parent="sampe_submission_menu_root"
+                  name="Master Data"
+                  sequence="2"/>
+        <menuitem id="customers_menu"
+                  parent="master_data_menu"
+                  name="Customers"
+                  sequence="1"
+                  action="sample_submission_mngmt.customer_action"/>
+<!--        <menuitem id="reports_menu"-->
+<!--                  parent="sampe_submission_menu_root"-->
+<!--                  name="Report"-->
+<!--                  sequence="3"-->
+<!--                  action="sample_submission_mngmt.report_wiz_action"/>-->
+    </data>
+</odoo>

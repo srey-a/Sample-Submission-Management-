@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <data>
+        <!--     	Category -->
+        <record model="ir.module.category" id="sample_submission_access_category">
+            <field name="name">Sample Submission Management</field>
+            <field name="sequence">10</field>
+        </record>
+        <!--         Groups -->
+        <record id="submission_confirm_group" model="res.groups">
+            <field name="name">Enable Confirm Button</field>
+            <field name="category_id" ref="sample_submission_mngmt.sample_submission_access_category"/>
+        </record>
+    </data>
+</odoo>
